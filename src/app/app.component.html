@@ -1,9 +1,9 @@
 <header>
-    Slide, slide, slide
+    Hi, I'm a header!
     <button>test</button>
 </header>
-<main>
-    <div
+<main [ngClass]="{ 'slider-active': isFormVisible }">
+    <section
         class="slider"
         [attr.inert]="!isFormVisible || null"
     >
@@ -21,20 +21,31 @@
         >
             Hide form
         </button>
-    </div>
-    <h1>Some heading</h1>
-    <button
-        type="button"
-        (click)="toggleForm()"
-    >
-        Show form
-    </button>
-    <p>some content content content</p>
-    <p>some content content content</p>
-    <p>some content content content</p>
-    <p>some content content content</p>
-    <p>some content content content</p>
-    <p>some content content content</p>
-    <p>some content content content</p>
-    <p>some content content content</p>
+    </section>
+    <section [attr.inert]="isFormVisible || null">
+        <h1>Some heading</h1>
+        <button
+            type="button"
+            (click)="toggleForm()"
+        >
+            Show form
+        </button>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <h2>Asdf</h2>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <h2>qwertz</h2>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <h2>stuff</h2>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <p>some content content content</p>
+        <p>some content content content</p>
+    </section>
 </main>

@@ -1,6 +1,6 @@
-# Slide In With Inert
+# Slide In Animation with inert
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+Testing a slide in animation coupled with the [inert](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inert) attribute. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
 ## Development server
 

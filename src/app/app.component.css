@@ -1,16 +1,28 @@
+:host {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 header {
     position: relative;
     background: lightgoldenrodyellow;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 50%);
     height: var(--header-height);
     padding: 0.5rem;
     z-index: 2;
 }
 
 main {
-    --slider-height: calc(100vh - var(--header-height));
-    position: relative;
+    flex-grow: 1;
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
     padding: 1rem;
-    z-index: 1;
+}
+
+main.slider-active {
+    overflow: hidden;
 }
 
 main h1 {
@@ -21,14 +33,19 @@ main h1 {
     position: absolute;
     top: 0;
     left: 0;
-    height: var(--slider-height);
+    height: 100vh;
     width: 100vw;
     transition: top 0.5s ease-in;
     background: white;
-    border-bottom: 1px solid gray;
-    padding: 1rem;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 50%);
+    padding-top: var(--header-height);
+    z-index: 1;
 }
 
 .slider[inert] {
-    top: calc(-1 * var(--slider-height));
+    top: -100%;
+}
+
+.slider form {
+    padding: 1rem;
 }
