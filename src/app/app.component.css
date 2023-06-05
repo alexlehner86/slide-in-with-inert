@@ -1,0 +1,34 @@
+header {
+    position: relative;
+    background: lightgoldenrodyellow;
+    height: var(--header-height);
+    padding: 0.5rem;
+    z-index: 2;
+}
+
+main {
+    --slider-height: calc(100vh - var(--header-height));
+    position: relative;
+    padding: 1rem;
+    z-index: 1;
+}
+
+main h1 {
+    margin: 0 0 0.5em;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--slider-height);
+    width: 100vw;
+    transition: top 0.5s ease-in;
+    background: white;
+    border-bottom: 1px solid gray;
+    padding: 1rem;
+}
+
+.slider[inert] {
+    top: calc(-1 * var(--slider-height));
+}

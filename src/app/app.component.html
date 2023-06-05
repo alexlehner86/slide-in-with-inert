@@ -1,0 +1,40 @@
+<header>
+    Slide, slide, slide
+    <button>test</button>
+</header>
+<main>
+    <div
+        class="slider"
+        [attr.inert]="!isFormVisible || null"
+    >
+        <form>
+            <label for="name">Name</label>
+            <input
+                id="name"
+                type="text"
+            >
+            <button type="submit">Submit</button>
+        </form>
+        <button
+            type="button"
+            (click)="toggleForm()"
+        >
+            Hide form
+        </button>
+    </div>
+    <h1>Some heading</h1>
+    <button
+        type="button"
+        (click)="toggleForm()"
+    >
+        Show form
+    </button>
+    <p>some content content content</p>
+    <p>some content content content</p>
+    <p>some content content content</p>
+    <p>some content content content</p>
+    <p>some content content content</p>
+    <p>some content content content</p>
+    <p>some content content content</p>
+    <p>some content content content</p>
+</main>
